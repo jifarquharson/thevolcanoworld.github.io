@@ -48,6 +48,69 @@
   <p>
   Abstracts can be up to a single A4 page, including any figures. This corresponds to around 300–350 words using the template above.  Do not adjust margins or font size of the template.
   </p>
+
+  <h2>Conference Sessions</h2>
+
+<p>The session descriptions below are intentionally broad, to ensure a diverse range of submissions and perspectives. However, if you believe your abstract doesn't fit neatly into one of these themes, please select "general session" from the dropdown menu on submission. </p>
+
+  <div class="accordion" id="sessionAccordion">
+
+        <!-- Session A -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingA">
+            <button class="accordion-button collapsed d-flex justify-content-between align-items-center" type="button"
+              data-bs-toggle="collapse" data-bs-target="#collapseA" aria-expanded="false" aria-controls="collapseA">
+              <span>
+                Session A: Exposure, preparedness, and risk reduction for volcanic hazards <!--From warning to action-->
+                <span class="badge bg-secondary ms-2">Click to expand</span>
+              </span>
+              <span class="accordion-symbol ms-3 fs-4">+</span>
+            </button>
+          </h2>
+          <div id="collapseA" class="accordion-collapse collapse" aria-labelledby="headingA" data-bs-parent="#sessionAccordion">
+            <div class="accordion-body">
+              Globally impactful volcanic eruptions are inevitable, but their consequences need not be catastrophic. This session focuses on the essential pillars of exposure assessment, preparedness, and risk reduction, underpinned by scientific research and grounded in the  that volcanic risk remains under-recognised on the international stage. We welcome contributions that explore (a) monitoring systems that enable early warnings and inform timely evacuations, (b) preparedness and resilience strategies that reduce vulnerability before, during, and after eruptions, and (c) advocacy efforts that raise awareness and secure sustained investment in volcanic hazard mitigation. Whether through identifying and addressing neglected high-risk volcanoes, empowering local scientists and communities with tools and training, or developing community-based response plans, this session seeks to highlight practical pathways toward more effective and equitable risk management. Submissions may also include policy-focused research, risk communication strategies, or international coordination efforts aligned with global risk frameworks. In a world where attention and resources are often directed toward other global risks, including climate change, planetary defence, pandemics and nuclear risk, volcanic hazards remain dangerously overlooked. This session seeks to change that, by uniting researchers, practitioners, and advocates committed to reducing exposure and building resilient futures in volcanic regions worldwide.
+            </div>
+          </div>
+        </div>
+
+        <!-- Session B -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingB">
+            <button class="accordion-button collapsed d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseB" aria-expanded="false" aria-controls="collapseB">
+              <span>
+                Session B: The future of volcano monitoring instrumentation <span class="badge bg-secondary ms-2">Click to expand</span>
+              </span>
+              <span class="accordion-symbol ms-3 fs-4">+</span>
+            </button>
+          </h2>
+          <div id="collapseB" class="accordion-collapse collapse" aria-labelledby="headingB" data-bs-parent="#sessionAccordion">
+            <div class="accordion-body">
+              Monitoring is a cornerstone of understanding volcanic activity, yet the tools we rely on—and our access to them—vary widely. Each volcano has its own personality which often demands its own tailored monitoring strategies. While seismic monitoring remains a widely used and accessible standard—thanks to established data streams, commercial availability, and open databases—other valuable techniques are less frequently applied, often due to cost, logistical complexity, or limited access to equipment. This session invites contributions that highlight the development, adaptation, and deployment of innovative, cost-effective volcanic monitoring tools. We are particularly interested in efforts that lower financial and technical barriers, enabling broader and more equitable adoption across the global volcanological community. Contributions showcasing open-source designs, modular systems, or locally manufactured instruments are especially welcome.
+We encourage presenters to share not only conceptual or technical designs but also demonstrations of field performance: we will include an exhibitor showcase, where attendees can show off their innovations. Instrumentation spanning the full range of monitoring parameters will be considered: gas emission rates, gas concentrations, thermal, infrasound, deformation, and beyond. By exchanging practical solutions and promoting affordable monitoring options, this session aims to foster collaboration, improve observational capacity worldwide, and support more comprehensive multi-parameter monitoring strategies at both well-funded and resource-limited volcanoes.
+            </div>
+          </div>
+        </div>
+
+        <!-- Session C -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingC">
+            <button class="accordion-button collapsed d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseC" aria-expanded="false" aria-controls="collapseC">
+              <span>
+                Session C: Knowledge sharing for a resilient future
+                <span class="badge bg-secondary ms-2">Click to expand</span>
+                </span>
+                <span class="accordion-symbol ms-3 fs-4">+</span>
+                </button>
+          </h2>
+          <div id="collapseC" class="accordion-collapse collapse" aria-labelledby="headingC" data-bs-parent="#sessionAccordion">
+            <div class="accordion-body">
+              In an era of growing volcanic risk and evolving research capabilities, the effective sharing of knowledge is fundamental to both scientific progress and public safety. This session invites contributions that explore strategies for communicating and exchanging knowledge across the diverse landscape of volcanology. We welcome studies and experiences that highlight collaborations between researchers, observatories, emergency management specialists, and other industries, as well as initiatives that foster engagement with the broader public and local communities. Topics may include the co-development of hazard mitigation strategies based on shared experience, the open dissemination of data and research tools, training opportunities (e.g. for early-career scientists), and efforts to harmonise international monitoring standards and databases. Particular emphasis is placed on open science and the transparent exchange of methods, results, and lessons learned, for example through digital platforms, in-person workshops, or community-centred outreach. By showcasing diverse models of knowledge sharing, this session aims to identify pathways that strengthen global volcanic risk reduction, support equitable access to information and training, and promote a collaborative, interdisciplinary approach to understanding and living with active volcanoes. Researchers, practitioners, and educators from all backgrounds are encouraged to contribute.
+            </div>
+          </div>
+        </div>
+
+
     <!--
 
     <p>Please upload your abstract or manuscript using the form below.</p>
@@ -55,6 +118,25 @@
     <iframe src="https://docs.google.com/forms/d/e/your-other-form-id/viewform?embedded=true" width="100%" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
   -->
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const accordionItems = document.querySelectorAll('.accordion-button');
+
+      accordionItems.forEach(button => {
+        const symbol = button.querySelector('.accordion-symbol');
+        const collapseId = button.getAttribute('data-bs-target');
+        const collapseEl = document.querySelector(collapseId);
+
+        collapseEl.addEventListener('show.bs.collapse', () => {
+          symbol.textContent = '–';
+        });
+
+        collapseEl.addEventListener('hide.bs.collapse', () => {
+          symbol.textContent = '+';
+        });
+      });
+    });
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
