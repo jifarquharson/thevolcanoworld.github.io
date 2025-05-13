@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script>
-    var password = prompt("Enter the password to access this site:");
-    if (password !== "NUVolc2025") {
-      document.body.innerHTML = "<h2>Access Denied</h2>";
-    }
-  </script>
+  <!--<script>
+    (function() {
+      var correctPassword = "NUVolc2025"; //
+      var userPassword = prompt("Enter password to view this site:");
+      if (userPassword !== correctPassword) {
+        document.body.innerHTML = "<h2>Access Denied</h2>";
+      }
+    })();
+  </script>-->
+  <noscript>
+  <div style="background: #ffc; padding: 10px; text-align: center;">
+    This site works best in a modern browser. Please update Safari or use Chrome or Firefox.
+  </div>
+</noscript>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Conference 2025 - Home</title>
@@ -52,7 +60,7 @@
       </div>
     </div>
     <div class="image-box position-absolute top-0 end-0">
-  <img src="img/logo.png" class="float-image" alt="Description of Image" style="height: 200px;">
+<img src="img/logo.png" class="float-image" alt="Description of Image" style="height: 200px;">
 </div>
   </div>
 

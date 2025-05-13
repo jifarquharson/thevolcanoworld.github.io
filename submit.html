@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script>
-    var password = prompt("Enter the password to access this site:");
-    if (password !== "NUVolc2025") {
-      document.body.innerHTML = "<h2>Access Denied</h2>";
-    }
-  </script>
+  <!--  <script>
+      (function() {
+        var correctPassword = "NUVolc2025"; //
+        var userPassword = prompt("Enter password to view this site:");
+        if (userPassword !== correctPassword) {
+          document.body.innerHTML = "<h2>Access Denied</h2>";
+        }
+      })();
+    </script>-->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Conference 2025 - Submit Abstract</title>
@@ -38,8 +41,15 @@
 
   <div class="container mt-5">
     <h1>Submit Your Abstract</h1>
-    <p>This event is not yet accepting abstracts.</p>
+    <p>This event is not yet accepting abstracts, but you can download the template here:</p><p>
+      <a class="btn btn-primary" href="docs/AbstractTemplate.docx" download>
+    📄  Download abstract template
+  </a></p>
+  <p>
+  Abstracts can be up to a single A4 page, including any figures. This corresponds to around 300–350 words using the template above.  Do not adjust margins or font size of the template.
+  </p>
     <!--
+
     <p>Please upload your abstract or manuscript using the form below.</p>
 
     <iframe src="https://docs.google.com/forms/d/e/your-other-form-id/viewform?embedded=true" width="100%" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
