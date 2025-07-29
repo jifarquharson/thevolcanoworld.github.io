@@ -170,3 +170,18 @@ h1, h2, h3, .navbar {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
+.card {
+  background-color: transparent;
+  border: none; /* optional: remove border if you want floating text */
+  box-shadow: none; /* optional: remove drop shadow */
+  align-items: center;
+}
+/* Make speaker images square-cropped and responsive */
+.card-img-top {
+  aspect-ratio: 1 / 1;     /* Force square shape */
+  object-fit: cover;       /* Crop image to fill square */
+  width: 60%;             /* Responsive width inside card */
+  height: auto;            /* Let browser control height from aspect ratio */
+  /*border-radius: 0.5rem;   /* Optional: soften edges */
+  border-radius: 50%
+}
