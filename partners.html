@@ -1,158 +1,344 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!--  <script>
+  <!--<script>
       (function() {
-        var correctPassword = "NUVolc2025"; //
+        var correctPassword = "NUVolc2025";
         var userPassword = prompt("Enter password to view this site:");
         if (userPassword !== correctPassword) {
           document.body.innerHTML = "<h2>Access Denied</h2>";
         }
       })();
-    </script>-->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </script>-->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Conference 2025 - Partners</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Flip card container */
+    .flip-card {
+      perspective: 1000px;
+      height: 100%;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      background-color: transparent;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .flip-card:hover {
+      box-shadow: 0 8px 16px rgba(255, 193, 7, 0.6);
+    }
+
+    /* Inner container */
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s ease;
+      transform-style: preserve-3d;
+      border-radius: 0.5rem;
+      flex-grow: 1;
+    }
+
+    /* Flip on hover for desktop */
+    @media (hover: hover) and (pointer: fine) {
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+    }
+
+    /* Flip when toggled via JS */
+    .flip-card-inner.is-flipped {
+      transform: rotateY(180deg);
+    }
+
+    /* Front and back faces */
+    .flip-card-front,
+    .flip-card-back {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 0.5rem;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+      box-sizing: border-box;
+    }
+
+    /* Front face styles */
+    .flip-card-front {
+      background-color: #222;
+      color: #fff;
+      z-index: 2;
+      position: relative;
+    }
+
+    /* Back face styles */
+    .flip-card-back {
+      background-color: #333;
+      color: #ffc107;
+      transform: rotateY(180deg);
+      overflow-y: auto;
+      z-index: 1;
+      text-align: center;
+      position: absolute;
+    }
+
+    /* Links on back */
+    .flip-card-back a {
+      color: #ffd54f;
+      text-decoration: underline;
+    }
+    .flip-card-back a:hover,
+    .flip-card-back a:focus {
+      color: #ffca28;
+      text-decoration: none;
+    }
+
+    /* Button styles */
+    .btn-outline-dark {
+      border-color: #ffc107;
+      color: #ffc107;
+    }
+    .btn-outline-dark:hover,
+    .btn-outline-dark:focus {
+      background-color: #ffc107;
+      color: #222;
+      border-color: #ffc107;
+    }
+
+    /* Responsive fixes: ensure cards stretch fully in columns */
+    .row > .col {
+      display: flex;
+    }
+    .row > .col > .flip-card {
+      flex: 1 1 auto;
+      min-height: 320px;
+    }
+
+    /* For smaller screens, add margin bottom so cards don’t stick vertically */
+    @media (max-width: 575.98px) {
+      .flip-card {
+        margin-bottom: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">Volcanology 2025</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
-          <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
-          <li class="nav-item"><a class="nav-link" href="submit.html">Submit</a></li>
-          <li class="nav-item"><a class="nav-link" href="excursion.html">Field excursion</a></li>
-          <li class="nav-item"><a class="nav-link active" href="partners.html">Partners</a></li>
-          <li class="nav-item"><a class="nav-link" href="sponsors.html">Sponsors and exhibitors</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="schedule.html">Schedule</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="register.html">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="submit.html">Submit</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="excursion.html">Field excursion</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="partners.html">Partners</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sponsors.html">Sponsors and exhibitors</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
   <div class="background">
-    <div class="container mt-5">
-      <br></br>      <br></br>
-      <!--<div class="d-flex flex-wrap gap-4 justify-content-between">
-
-        <!-- GVRA box -->
-        <!--<div class="text-box p-4 shadow d-flex align-items-start flex-fill" style="min-width: 300px; max-width: 32%;">
-          <img src="img/gvra.jpg" alt="GVRA Logo" style="height: 80px; margin-right: 1rem;">
-          <div>
-            <h3>Global Volcano Risk Alliance</h3>
-            <p>The Global Volcano Risk Alliance is an international charity “<b>dedicated to mitigating the risk from globally impactful eruptions, through preparedness, monitoring, and advocacy for anticipatory action.</b>” Find out more about their activities at their website: <a href="https://www.globalvolcanoriskalliance.com/" target="_blank">https://www.globalvolcanoriskalliance.com/</a>.</p>
-            <p>GVRA will be hosting the theme of <i>Exposure, preparedness, and risk reduction</i>. As well as chairing an open session on the state-of-the-art of volcanic risk reduction, GVRA will be facilitating an interactive workshop. Keep an eye on the <a href="schedule.html">Schedule</a> page for more details.</p>
+  <main class="container my-5">
+    <h1 class="mb-4 text-center">Conference Partners</h1>
+<h3 class="mb-4 text-center">Tap to learn more</h3>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+      <!-- GVRA -->
+      <div class="col">
+        <div class="flip-card h-100" tabindex="0" aria-label="Global Volcano Risk Alliance partner card">
+          <div class="flip-card-inner">
+            <div
+              class="flip-card-front d-flex flex-column justify-content-center align-items-center"
+            >
+              <img
+                src="img/gvra.jpg"
+                alt="GVRA Logo"
+                class="img-fluid"
+                style="max-height: 100px; margin-bottom: 1rem"
+              />
+              <h5 class="text-center">Global Volcano Risk Alliance</h5>
+              <button class="btn btn-outline-dark mt-2" disabled>+ More Info</button>
+            </div>
+            <div class="flip-card-back">
+              <p>
+                GVRA is an international charity
+                dedicated to mitigating the risk from globally impactful
+                eruptions.
+              </p>
+              <p>
+                They will lead the theme
+                <i>Exposure, preparedness, and risk reduction</i>. Learn more at the
+                <a
+                  href="https://www.globalvolcanoriskalliance.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GVRA website</a
+                >.
+              </p>
+            </div>
           </div>
         </div>
+      </div>
 
-        <!-- VolcanoTech box -->
-        <!--<div class="text-box p-4 shadow d-flex align-items-start flex-fill" style="min-width: 300px; max-width: 32%;">
-          <img src="img/volcanotech.jpeg" alt="VolcanoTech Logo" style="height: 80px; margin-right: 1rem;">
-          <div>
-            <h3>VolcanoTech</h3>
-            <p>VolcanoTech is an international team of experts who design and develop volcano monitoring equipment for low-cost installations. Their mission is to “<b>enhance access to volcanic forecasting technology for communities who need it most.</b>” Find out more about their activities at their website: <a href="https://www.volcanotech.co.uk/" target="_blank">https://www.volcanotech.co.uk/</a>.</p>
-            <p>VolcanoTech will be hosting the theme of <i>The next generation of volcano monitoring</i>. As well as seminars and posters highlighting the use of monitoring technology in research and practice, VolcanoTech will be hosting an interactive "innovation showcase," giving attendees the chance to see and discuss technology up close and personal.  Keep an eye on the <a href="schedule.html">Schedule</a> page for more details.</p>
+      <!-- VolcanoTech -->
+      <div class="col">
+        <div class="flip-card h-100" tabindex="0" aria-label="VolcanoTech partner card">
+          <div class="flip-card-inner">
+            <div
+              class="flip-card-front d-flex flex-column justify-content-center align-items-center"
+            >
+              <img
+                src="img/volcanotech.jpeg"
+                alt="VolcanoTech Logo"
+                class="img-fluid"
+                style="max-height: 100px; margin-bottom: 1rem"
+              />
+              <h5 class="text-center">VolcanoTech</h5>
+              <button class="btn btn-outline-dark mt-2" disabled>+ More Info</button>
+            </div>
+            <div class="flip-card-back">
+              <p>
+                VolcanoTech builds accessible volcano monitoring tools for
+                vulnerable communities. Learn more at
+                <a
+                  href="https://www.volcanotech.co.uk/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >volcanotech.co.uk</a
+                >.
+              </p>
+              <p>
+                They will lead the theme
+                <i>The next generation of volcano monitoring</i>.
+              </p>
+            </div>
           </div>
         </div>
+      </div>
 
-        <!-- ACV box -->
-      <!--  <div class="text-box p-4 shadow d-flex align-items-start flex-fill" style="min-width: 300px; max-width: 32%;">
-          <!--<img src="img/nied.png" alt="NIED Logo" style="height: 80px; margin-right: 1rem;">-->
-          <!--<div>
-            <h3>Asian Consortium of Volcanology</h3>
-            <p>The Asian Consortium of Volcanology is a network of volcano monitoring and research institutes across eight Asian countries, focused on <b>scientific exchange, hazard mitigation, and training the next generation of volcanologists</b>. Find out more about their activities and mission statement at their website: <a href="https://kazan.bosai.go.jp/en/acv/" target="_blank">https://kazan.bosai.go.jp/en/acv/</a>.</p>
-<p>ACV will be hosting the theme of <i>Knowledge-sharing</i>. As well as co-chairing seminar and poster sessions on the ways in which researchers can communicate their results and data to each other, observator practicioners, and the broader public, ACV will facilitate a panel discussion involving some of the world's foremost experts on these themes.  Keep an eye on the <a href="schedule.html">Schedule</a> page for more details.
+      <!-- ACV -->
+      <div class="col">
+        <div class="flip-card h-100" tabindex="0" aria-label="Asian Consortium of Volcanology partner card">
+          <div class="flip-card-inner">
+            <div
+              class="flip-card-front d-flex flex-column justify-content-center align-items-center"
+            >
+              <!--<img src="img/nied.png" alt="ACV Logo" class="img-fluid" style="max-height: 100px;">-->
+              <h1 style="margin-bottom: 0.25rem;">ACV</h1>
+              <h5 class="text-center">Asian Consortium of Volcanology</h5>
+              <button class="btn btn-outline-dark mt-2" disabled>+ More Info</button>
+            </div>
+            <div class="flip-card-back">
+              <p>
+                ACV unites volcano institutions in Asia for training and hazard
+                mitigation. Learn more at the
+                <a
+                  href="https://kazan.bosai.go.jp/en/acv/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >ACV website</a
+                >.
+              </p>
+              <p>
+                They will lead the <i>Knowledge-sharing</i> theme and host a
+                panel discussion.
+              </p>
+            </div>
           </div>
         </div>
+      </div>
 
-      </div>-->
-      <!-- Inside your container (replace the existing partner boxes) -->
-<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-  <!-- Card template -->
-  <div class="col">
-    <div class="flip-card h-100">
-      <div class="flip-card-inner">
-        <!-- FRONT -->
-        <div class="flip-card-front d-flex flex-column justify-content-center align-items-center p-3">
-          <img src="img/gvra.jpg" alt="GVRA Logo" class="img-fluid" style="max-height: 100px;">
-          <h5 class="mt-3 text-center">Global Volcano Risk Alliance</h5>
-          <button class="btn btn-outline-dark mt-2">+ More Info</button>
-        </div>
-        <!-- BACK -->
-        <div class="flip-card-back p-3">
-          <p>The Global Volcano Risk Alliance is an international charity “<b>dedicated to mitigating the risk from globally impactful eruptions</b>.” Learn more at <a href="https://www.globalvolcanoriskalliance.com/" target="_blank">GVRA website</a>.</p>
-          <p>They will host the theme <i>Exposure, preparedness, and risk reduction</i> and will lead an interactive workshop. See <a href="schedule.html">Schedule</a>.</p>
+      <!-- IAVCEI -->
+      <div class="col">
+        <div class="flip-card h-100" tabindex="0" aria-label="IAVCEI partner card">
+          <div class="flip-card-inner">
+            <div
+              class="flip-card-front d-flex flex-column justify-content-center align-items-center"
+            >
+              <img
+                src="img/Iavcei_logo_2019.png"
+                alt="IAVCEI Logo"
+                class="img-fluid"
+                style="max-height: 100px; margin-bottom: 1rem"
+              />
+              <h5 class="text-center">IAVCEI</h5>
+              <button class="btn btn-outline-dark mt-2" disabled>+ More Info</button>
+            </div>
+            <div class="flip-card-back">
+              <p>
+                IAVCEI is the International Association of Volcanology and
+                Chemistry of the Earth’s Interior. Learn more at
+                <a
+                  href="https://www.iavceivolcano.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >iavceivolcano.org</a
+                >.
+              </p>
+              <p>This conference is officially endorsed by IAVCEI.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-
-  <!-- Repeat for each partner -->
-  <div class="col">
-    <div class="flip-card h-100">
-      <div class="flip-card-inner">
-        <div class="flip-card-front d-flex flex-column justify-content-center align-items-center p-3">
-          <img src="img/volcanotech.jpeg" alt="VolcanoTech Logo" class="img-fluid" style="max-height: 100px;">
-          <h5 class="mt-3 text-center">VolcanoTech</h5>
-          <button class="btn btn-outline-dark mt-2">+ More Info</button>
-        </div>
-        <div class="flip-card-back p-3">
-          <p>VolcanoTech builds affordable volcano monitoring tech. Learn more at <a href="https://www.volcanotech.co.uk/" target="_blank">volcanotech.co.uk</a>.</p>
-          <p>They will host the theme <i>The next generation of volcano monitoring</i> and lead the innovation showcase. See <a href="schedule.html">Schedule</a>.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col">
-    <div class="flip-card h-100">
-      <div class="flip-card-inner">
-        <div class="flip-card-front d-flex flex-column justify-content-center align-items-center p-3">
-          <!--<img src="img/nied.png" alt="ACV Logo" class="img-fluid" style="max-height: 100px;">-->
-        <p></p>  <h1>ACV</h1>
-          <h5 class="mt-3 text-center">Asian Consortium of Volcanology</h5>
-          <button class="btn btn-outline-dark mt-2">+ More Info</button>
-        </div>
-        <div class="flip-card-back p-3">
-          <p>ACV is a network of volcano institutions in Asia. Learn more at <a href="https://kazan.bosai.go.jp/en/acv/" target="_blank">ACV website</a>.</p>
-          <p>They will host the <i>Knowledge-sharing</i> theme and lead a panel discussion. See <a href="schedule.html">Schedule</a>.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col">
-    <div class="flip-card h-100">
-      <div class="flip-card-inner">
-        <div class="flip-card-front d-flex flex-column justify-content-center align-items-center p-3">
-          <img src="img/Iavcei_logo_2019.png" alt="IAVCEI Logo" class="img-fluid" style="max-height: 100px;">
-          <h5 class="mt-3 text-center">IAVCEI</h5>
-          <button class="btn btn-outline-dark mt-2">+ More Info</button>
-        </div>
-        <div class="flip-card-back p-3">
-          <p>IAVCEI is the International Association of Volcanology and Chemistry of the Earth’s Interior. Learn more at <a href="https://www.iavceivolcano.org/" target="_blank">iavceivolcano.org</a>.</p>
-          <p>This event is officially endorsed by IAVCEI.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+  </main>
 </div>
-
-      <div class="image-box position-absolute top-0 end-0">
-    <img src="img/logo.png" class="float-image" alt="logo" style="height: 200px;">
+  <div
+    class="position-fixed bottom-0 end-0 p-3"
+    style="z-index: 1030; pointer-events:none;"
+  >
+    <img src="img/logo.png" class="img-fluid" alt="logo" style="height: 100px" />
   </div>
-  </div>
-</div>
-
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Add tap/click flip for mobile devices
+    document.querySelectorAll('.flip-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const inner = card.querySelector('.flip-card-inner');
+        inner.classList.toggle('is-flipped');
+      });
+    });
+  </script>
 </body>
 </html>
