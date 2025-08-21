@@ -185,3 +185,16 @@ h1, h2, h3, .navbar {
   /*border-radius: 0.5rem;   /* Optional: soften edges */
   border-radius: 50%
 }
+section:nth-of-type(odd) {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+section:nth-of-type(even) {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
