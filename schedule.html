@@ -17,6 +17,21 @@
   <title>Conference 2025 - Schedule</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Sticky jump button */
+    .sticky-button {
+
+      display: inline-block;
+      background-color: #fff;
+      color: #c9697a;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      border: 2px solid #c9697a;
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -35,51 +50,145 @@
           <li class="nav-item"><a class="nav-link" href="excursion.html">Field excursion</a></li>
           <li class="nav-item"><a class="nav-link" href="partners.html">Partners</a></li>
           <li class="nav-item"><a class="nav-link" href="sponsors.html">Sponsors and exhibitors</a></li>
-          <li class="nav-item"><a class="nav-link"  href="contact.html">Useful information</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Useful information</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
   <div class="background">
-
-
     <div class="container my-5">
-      <a href="#keynotes" style="
-        display: inline-block;
-        background-color: #fff;
-        color: #c9697a;
-        padding: 10px 20px;
-        border-radius: 6px;
-        font-weight: bold;
-        text-decoration: none;
-        border: 2px solid #c9697a;
-      ">
-        Jump to speakers ↓
+
+      <!-- Jump to schedule button -->
+      <a href="#schedule" class="sticky-button">
+        Jump to schedule ↓
       </a>
-      <br></br>
-      <div class="content-wrapper">
-        <div class="text-box shadow">
+
+      <!-- Plenary and Keynote Speakers -->
+      <section id="keynotes" class="my-5">
+        <h2 class="text-center mb-4">Plenary and Keynote Speakers</h2>
+        <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-3 justify-content-center">
+
+          <!-- Speaker 1 -->
+          <div class="col">
+            <div class="card h-100 shadow-sm text-center">
+              <img src="img/speakers/patty-mothes-nobg.png" class="card-img-top img-fluid" alt="Patricia Ann Mothes">
+              <div class="card-body">
+                <h5 class="card-title">Patricia Ann Mothes</h5>
+                <p class="card-text">Instituto Geofísico - Escuela Politécnica Nacional (Ecuador)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Speaker 2 -->
+          <div class="col">
+            <div class="card h-100 shadow-sm text-center">
+              <img src="img/speakers/lara-mani-nobg.png" class="card-img-top img-fluid" alt="Lara Mani">
+              <div class="card-body">
+                <h5 class="card-title">Dr Lara Mani</h5>
+                <p class="card-text">Global Volcano Risk Alliance/ University of Cambridge (UK)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Speaker 3 -->
+          <div class="col">
+            <div class="card h-100 shadow-sm text-center">
+              <img src="img/speakers/tom-pering-nobg.png" class="card-img-top img-fluid" alt="Tom Pering">
+              <div class="card-body">
+                <h5 class="card-title">Dr Tom Pering</h5>
+                <p class="card-text">VolcanoTech/ University of Sheffield (UK)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Speaker 4 -->
+          <div class="col">
+            <div class="card h-100 shadow-sm text-center">
+              <img src="img/speakers/eisuke-fujita-nobg.png" class="card-img-top img-fluid" alt="Eisuke Fujita">
+              <div class="card-body">
+                <h5 class="card-title">Dr Eisuke Fujita</h5>
+                <p class="card-text">National Research Institute for Earth Science and Disaster Resilience (Japan)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Speaker 5 -->
+          <div class="col">
+            <div class="card h-100 shadow-sm text-center">
+              <img src="img/speakers/pablo-forte-2-nobg.png" class="card-img-top img-fluid" alt="Pablo Forte">
+              <div class="card-body">
+                <h5 class="card-title">Dr Pablo Forte</h5>
+                <p class="card-text">Observatorio Argentino de Vigilancia Volcánica (Argentina)</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Conference Schedule -->
+      <div id="schedule" class="content-wrapper">
+        <div class="text-box shadow" style="width:100%; max-width:100%;">
           <h2 class="mb-3">Conference Schedule</h2>
-          <h3 class="mb-4">⚠ Subject to change</h3>
+          <!--<h3 class="mb-4">⚠ Subject to change</h3>-->
           <div class="accordion" id="scheduleAccordion">
 
             <!-- Day 0 -->
             <div class="accordion-item">
               <h2 class="accordion-header" id="heading0">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse0" aria-expanded="true" aria-controls="collapse0">
-                  Day 0 — 7th October 2025: Public Events
+                  Day 0 — 7th October 2025
                 </button>
               </h2>
               <div id="collapse0" class="accordion-collapse collapse show" aria-labelledby="heading0" data-bs-parent="#scheduleAccordion">
                 <div class="accordion-body">
-                  <strong>17:00–21:00</strong>: Registration and icebreaker (venue TBC)
+                  <strong>19:30–21:00</strong>: Icebreaker
+                  <p><strong>Venue:</strong> <a href="https://maps.app.goo.gl/qRSQMh1RiFZpVqxWA" target="_blank">街CAFE Sea Point YORIMICHI</a></p>
+
                 </div>
               </div>
             </div>
 
             <!-- Day 1 -->
             <div class="accordion-item">
+  <h2 class="accordion-header" id="heading1">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+      Day 1 — 8th October 2025: Exposure, Preparedness, and Risk Reduction
+    </button>
+  </h2>
+  <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#scheduleAccordion">
+    <div class="accordion-body">
+<p><strong>Venue:</strong> <a href="https://maps.app.goo.gl/VbKuDUYfdAunmYVNA" target="_blank">Niigata University Library main hall</a></p>
+      <p><strong>09:20–09:25</strong>: Welcome  — Jamie Farquharson</p>
+      <p><strong>09:25–09:30</strong>: Opening address  — President Ushiki</p>
+      <p><strong>09:30–10:20</strong>: Plenary Talk — Patricia Mothes — Practicing Volcanology in the Northern Andes</p>
+      <p><strong>10:20–10:40</strong>: Photo break + coffee break</p>
+      <p><strong>10:40–11:20</strong>: Keynote 1 — Lara Mani — Are we prepared for the next big eruption?</p>
+      <p><strong>11:20–11:40</strong>: Oral 1 — Heather Craig — Exploring volcanic risk management challenges for authorities and stakeholders</p>
+      <p><strong>11:40–12:00</strong>: Oral 2 — James Hammond — Environmental Hazards in Asia: Building a Community of Disaster Researchers</p>
+      <p><strong>12:00–12:15</strong>: Lightning talks 1 — P01–P03 (A1–A3), P13–P18 (D1–D6)</p>
+      <p><strong>12:15–13:30</strong>: Lunchtime and poster session</p>
+      <p><strong>13:30–13:50</strong>: Oral 3 — Blaise Mafuko Nyandwi — Rebuilding Lives on Lava: The Dynamic Forces Shaping Resettlement in Post-Eruption Goma</p>
+      <p><strong>13:50–14:10</strong>: Oral 4 — Thystere Bantidi — Uncovering the Interplay Between Tectonism and Magmatism During the 2021 Nyiragongo Eruption</p>
+      <p><strong>14:10–14:25</strong>: Oral 5 — Blaise Mafuko Nyandwi — Mitigating Mazuku Hazards in Goma area</p>
+      <p><strong>14:25–14:40</strong>: Coffee break</p>
+      <p><strong>14:40–15:00</strong>: Oral 6 — Jonathan Procter — From Maps to Models: Advancing Lahar Hazard Assessment at Ruapehu Volcano</p>
+      <p><strong>15:00–15:20</strong>: Oral 7 — Josh Hayes — Developing a National Volcano Model for New Zealand</p>
+      <p><strong>15:20–15:40</strong>: Oral 8 — Pablo Forte — Turning the World’s Youngest Volcano Observatory into an Effective Tool for Risk Reduction</p>
+      <p><strong>15:40–15:55</strong>: Oral 9 — Gaurav Kumar — Integrating AI-Driven Risk Metrics, Low-Cost Sensors, and Open-Access Training</p>
+      <p><strong>15:55–16:00</strong>: Break (preparation for worshop)</p>
+      <p><strong>16:00–17:45</strong>: GVRA workshop</p>
+      <p><strong>17:45</strong>: Dispersal</p>
+      <div class="text-center mt-3">
+              <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                Close this day
+              </button>
+            </div>
+    </div>
+  </div>
+</div>
+            <!--<div class="accordion-item">
               <h2 class="accordion-header" id="heading1">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
                   Day 1 — 8th October 2025: Exposure, Preparedness, and Risk Reduction
@@ -94,22 +203,43 @@
                   <p><strong>Afternoon:</strong> Session A2: GVRA activities</p>
                 </div>
               </div>
-            </div>
+            </div>-->
 
             <!-- Day 2 -->
             <div class="accordion-item">
               <h2 class="accordion-header" id="heading2">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                  Day 2 — 9th October 2025: Next Generation of Volcano Monitoring
+                  Day 2 — 9th October 2025: The Next Generation of Volcano Monitoring
                 </button>
               </h2>
               <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#scheduleAccordion">
                 <div class="accordion-body">
-                  <p><strong>Venue:</strong> <a href="https://maps.app.goo.gl/VbKuDUYfdAunmYVNA" target="_blank">Niigata University Library main hall</a></p>
-                  <p><strong>Morning:</strong> Opening speeches<br>
-                  Session B1: The next generation of volcano monitoring (oral presentations)</p>
-                  <p><strong>Lunch:</strong> Session B posters (venue: library lounge)</p>
-                  <p><strong>Afternoon:</strong> Session B2: Innovation showcase (venue: TBC)</p>
+<p><strong>Venue:</strong> <a href="https://maps.app.goo.gl/VbKuDUYfdAunmYVNA" target="_blank">Niigata University Library main hall</a></p>
+                  <p><strong>09:00</strong>: Welcome — Jamie Farquharson</p>
+                  <p><strong>09:00–09:40</strong>: Keynote 2 — Tom Pering — Results and reflections from a network of low-cost permanent ultraviolet cameras for sulphur dioxide measurements</p>
+                  <p><strong>09:40–10:00</strong>: Oral 10 — Abigail Robinson — Enhancing Deep Learning Phase Detection Models with Multi-Station Context</p>
+                  <p><strong>10:00–10:20</strong>: Oral 11 — Stephan Kolzenburg — A new generation of field rheometers and their potential for improving near real time lava flow monitoring and hazard assessment</p>
+                  <p><strong>10:20–10:40</strong>: Oral 12 — Vladimir Bolgov — An underwater radiosonde to measure radioactive radiation and radon at the bottom of an acidic volcanic lake</p>
+                  <p><strong>10:40–11:10</strong>: Coffee break</p>
+                  <p><strong>11:10–11:30</strong>: Oral 13 — Eric Newland — Temporal Evolution of Crustal Stress at Volcanoes During Periods of Unrest</p>
+                  <p><strong>11:30–11:50</strong>: Oral 14 — Rikuto Daikai — High-Resolution GBSAR and DEM Approaches for Detecting Long-Term Deformation of the Heisei-Shinzan Lava Dome</p>
+                  <p><strong>11:50–12:10</strong>: Oral 15 — Chris Conway — An overview of methods for dating Holocene lava flows at stratovolcanoes</p>
+                  <p><strong>12:10–12:25</strong>: Lightning talks 2 — P4–P9 (B1–B6), P19–22 (D7–D10)</p>
+                  <p><strong>12:25–13:40</strong>: Lunch and posters</p>
+                  <p><strong>13:40–14:00</strong>: Oral 16 — Shohei Shibata — Magma fragmentation depth of large-scale and explosive phreatoplinian eruption</p>
+                  <p><strong>14:00–14:20</strong>: Oral 17 — Christopher Gomez — The Summer 2024 Lahar in the Tansandani of Unzen Volcano: Reflections on the role of local over-steepening</p>
+                  <p><strong>14:20–14:40</strong>: Oral 18 — Kyoko Kataoka — Lahar chronology and associated eruption history during the past 32,000 years at Adatara volcano, northeast Japan</p>
+                  <p><strong>14:40–14:50</strong>: Break (+Setting up for workshop)</p>
+                  <p><strong>14:50–16:50</strong>: Volcano monitoring tools workshop — Tom Pering</p>
+                  <p><strong>16:50</strong>: Dispersal</p>
+
+                  <!-- Collapse button -->
+                  <div class="text-center mt-3">
+                    <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
+                      Close this day
+                    </button>
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -123,13 +253,34 @@
               </h2>
               <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#scheduleAccordion">
                 <div class="accordion-body">
-                  <p><strong>Venue:</strong> <a href="https://maps.app.goo.gl/VbKuDUYfdAunmYVNA" target="_blank">Niigata University Library main hall</a></p>
-                  <p><strong>Morning:</strong> Opening speeches<br>
-                  Session C1: Knowledge sharing (oral presentations)</p>
-                  <p><strong>Lunch:</strong> Session C posters (venue: library lounge)</p>
-                  <p><strong>Afternoon:</strong> Session C2: General volcanology (oral presentations)<br>
-                  Session C3: Panel discussion</p>
-                  <p><strong>Evening:</strong> Closing ceremony at  <a href="https://maps.app.goo.gl/sfZzydWNKort51t16" target="_blank">ANA Crowne Plaza hotel</a></p>
+<p><strong>Venue:</strong> <a href="https://maps.app.goo.gl/VbKuDUYfdAunmYVNA" target="_blank">Niigata University Library main hall</a></p>
+                  <p><strong>09:00</strong>: Welcome — Jamie Farquharson</p>
+                  <p><strong>09:00–09:40</strong>: Keynote 3 — Eisuke Fujita — Activity of Asian Consortium of Volcanology (ACV)</p>
+                  <p><strong>09:40–10:00</strong>: Oral 19 — Christina Widiwijayanti — Advancing Volcanology Through Global Knowledge Sharing and Standardized Data Practices</p>
+                  <p><strong>10:00–10:20</strong>: Oral 20 — Yasuhisha Tajima — The process of revising volcanic hazard maps and lessons learned and challenges in response during recent eruptions of Kirishima Volcano</p>
+                  <p><strong>10:20–10:40</strong>: Oral 21 — Shinji Takarada — Development of Geological Hazards Information Database: New release of Geological Hazards Information System and Volcanic Hazards Information System</p>
+                  <p><strong>10:40–11:00</strong>: Coffee break</p>
+                  <p><strong>11:00–11:20</strong>: Oral 22 — Aisyah Qurrataaini — MARABUMI: Bridging Researchers and Citizens through Geological Hazard Science Communication</p>
+                  <p><strong>11:20–11:40</strong>: Oral 23 — Denise Owen — Communicating Everyday and Potential Hazards to Tourists</p>
+                  <p><strong>11:40–12:20</strong>: Keynote 4 — Pablo Forte — ALVO: a regional platform for volcanic risk reduction in Latin America</p>
+                  <p><strong>12:20–12:25</strong>: Lightning talks 3 — P10–P12 (C1–C3)</p>
+                  <p><strong>12:25–13:40</strong>: Lunch and posters</p>
+                  <p><strong>13:40–14:00</strong>: Oral 24 — Mariton Bornas — Monitoring Volcanic Unrest in the Philippines in the Past 13 Years: Challenges to Effective Forecasting and Crisis Communication</p>
+                  <p><strong>14:00–14:20</strong>: Oral 25 — Mochamad Nugraha — Four-Pillar Approach to Volcanic Disaster Mitigation Strategies in Indonesia</p>
+                  <p><strong>14:20–14:40</strong>: Oral 26 — Perla Delos Reyes — Assessment of volcanic eruption preparedness of communities: Taal Volcano as Case Study</p>
+                  <p><strong>14:40–15:10</strong>: Coffee break</p>
+                  <p><strong>15:10–16:20</strong>: Panel discussion + Q & A</p>
+                  <p><strong>16:20–16:25</strong>: Closing remarks — Jamie Farquharson</p>
+                  <p><strong>16:25–16:30</strong>: Closing remarks — Kuni Sueyoshi</p>
+                  <p><strong>19:00–21:00</strong>: Banquet </strong>(Venue: <a href="https://maps.app.goo.gl/rEdzmKyTygAz88tg8" target="_blank">ANA Crowne Plaza</a>)</p>
+
+                  <!-- Collapse button -->
+                  <div class="text-center mt-3">
+                    <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
+                      Close this day
+                    </button>
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -156,71 +307,9 @@
           <img src="img/logo.png" class="logo-image" alt="Conference Logo">
         </div>
       </div>
-    </div>
 
-  <!-- Confirmed Speakers Section -->
-<section class="my-5">
-  <h2 id="keynotes" class="text-center mb-4">Keynote Speakers</h2>
-  <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-3 justify-content-center">
-
-    <!-- Speaker 1 -->
-    <div class="col">
-      <div class="card h-100 shadow-sm text-center">
-        <img src="img/speakers/patty-mothes-nobg.png" class="card-img-top img-fluid" alt="Patricia Ann Mothes">
-        <div class="card-body">
-          <h5 class="card-title">Patricia Ann Mothes</h5>
-          <p class="card-text">Instituto Geofísico - Escuela Politécnica Nacional (Ecuador)</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Speaker 2 -->
-    <div class="col">
-      <div class="card h-100 shadow-sm text-center">
-        <img src="img/speakers/lara-mani-nobg.png" class="card-img-top img-fluid" alt="Lara Mani">
-        <div class="card-body">
-          <h5 class="card-title">Dr Lara Mani</h5>
-          <p class="card-text">Global Volcano Risk Alliance/ University of Cambridge (UK)</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Speaker 3 -->
-    <div class="col">
-      <div class="card h-100 shadow-sm text-center">
-        <img src="img/speakers/tom-pering-nobg.png" class="card-img-top img-fluid" alt="Tom Pering">
-        <div class="card-body">
-          <h5 class="card-title">Dr Tom Pering</h5>
-          <p class="card-text">VolcanoTech/ University of Sheffield (UK)</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Speaker 4 -->
-    <div class="col">
-      <div class="card h-100 shadow-sm text-center">
-        <img src="img/speakers/eisuke-fujita-nobg.png" class="card-img-top img-fluid" alt="Eisuke Fujita">
-        <div class="card-body">
-          <h5 class="card-title">Dr Eisuke Fujita</h5>
-          <p class="card-text">National Research Institute for Earth Science and Disaster Resilience (Japan)</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Speaker 5 -->
-    <div class="col">
-      <div class="card h-100 shadow-sm text-center">
-        <img src="img/speakers/pablo-forte-2-nobg.png" class="card-img-top img-fluid" alt="Pablo Forte">
-        <div class="card-body">
-          <h5 class="card-title">Dr Pablo Forte</h5>
-          <p class="card-text">Observatorio Argentino de Vigilancia Volcánica (Argentina)</p>
-        </div>
-      </div>
     </div>
   </div>
-</section>
-  <h3 class="text-center mb-4">More speakers to be announced</h3>
-    </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
